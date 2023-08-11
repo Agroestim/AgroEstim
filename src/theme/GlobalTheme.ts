@@ -10,7 +10,7 @@ export const defaultTheme = ThemeTypes.light;
  */
 export default {
   [ThemeTypes.light]: {
-    textPrimary: "",
+    textPrimary: "blue",
     textSecondary: "",
     textTertiary: "",
     textAccent: "",

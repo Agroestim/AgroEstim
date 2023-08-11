@@ -1,23 +1,24 @@
-import { Provider } from "react-redux";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
-import { useTheme } from "../../hooks/useTheme";
-import store from "../../store";
-import GlobalTheme from "../../theme/GlobalTheme";
-import Styled from "./styled";
-
-const App = () => {
-  const theme = useTheme(GlobalTheme);
-  const router = createBrowserRouter([{ path: "/", element: <h1>Hola</h1> }]);
-
+import { FC } from "react";
+const Home: FC = () => {
   return (
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <Styled />
-        <RouterProvider router={router}></RouterProvider>
-      </ThemeProvider>
-    </Provider>
+    <div className="Container">
+      <div className="containerLayout">
+        <div className="contentWrapper">
+          <div className="contentLayout">
+            <section className="heroWrapper">
+              <main className="heroLayout">
+                <div className="cardWrapper">
+                  <div className="cardLayout">
+                    <div className="cardBlock"></div>
+                  </div>
+                </div>
+              </main>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default App;
+export default Home;
