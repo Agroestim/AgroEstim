@@ -10,6 +10,7 @@ export interface Theme {
   textDark: string;
   textBlack: string;
 
+  colorPrimary: string;
   colorInfo: string;
   colorSuccess: string;
   colorWarning: string;

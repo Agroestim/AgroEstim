@@ -4,11 +4,11 @@ import themeReducer from "./reducers/themeReducer";
 /**
  * Representa a todos los `reducers` combinados de la aplicacion.
  */
-const combinedStore = combineReducers({
+const combinedReducers = combineReducers({
   Theme: themeReducer,
 });
 
 /**
  * `Store` de la aplicacion.
  */
-export default legacy_createStore(combinedStore);
+export default legacy_createStore(combinedReducers);

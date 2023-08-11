@@ -1,3 +1,5 @@
+import { Theme } from "../theme/BaseTheme";
+
 /**
  * Tipos de estado para el proveedor de temas de color.
  */
@@ -26,4 +28,12 @@ export enum ThemeActionTypes {
 export type ThemeAction = {
   type: ThemeActionTypes.SET_THEME;
   payload: ThemePayload;
+};
+
+/**
+ * Representa la paleta de temas de colores de la aplicacion.
+ */
+export type GlobalTheme = {
+  [ThemeTypes.light]: Theme;
+  [ThemeTypes.dark]: Theme;
 };
