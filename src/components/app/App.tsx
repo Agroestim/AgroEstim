@@ -1,21 +1,16 @@
 import { FC } from "react";
+import Footer from "../common/Footer";
+import Header from "../common/Header";
+import Navbar from "../common/Navbar";
+
 const Home: FC = () => {
   return (
-    <div className="Container">
-      <div className="containerLayout">
-        <div className="contentWrapper">
-          <div className="contentLayout">
-            <section className="heroWrapper">
-              <main className="heroLayout">
-                <div className="cardWrapper">
-                  <div className="cardLayout">
-                    <div className="cardBlock"></div>
-                  </div>
-                </div>
-              </main>
-            </section>
-          </div>
-        </div>
+    <div className="AppWrapper">
+      <div className="AppLayout">
+        <Navbar></Navbar>
+        <Header></Header>
+        <div className="Main"></div>
+        <Footer></Footer>
       </div>
     </div>
   );

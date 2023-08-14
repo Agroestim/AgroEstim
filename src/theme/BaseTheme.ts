@@ -4,13 +4,12 @@
 export interface Theme {
   textPrimary: string;
   textSecondary: string;
-  textTertiary: string;
-  textAccent: string;
-  textLight: string;
-  textDark: string;
-  textBlack: string;
 
   colorPrimary: string;
+  colorSecondary: string;
+  colorAccent: string;
+  colorLight: string;
+  colorDark: string;
   colorInfo: string;
   colorSuccess: string;
   colorWarning: string;
@@ -18,6 +17,6 @@ export interface Theme {
 
   backgroundPrimary: string;
   backgroundSecondary: string;
-  backgroundTertiary: string;
-  backgroundAccent: string;
+
+  backgroundImageURL: string;
 }

@@ -1,9 +1,9 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+import Home from "./components/app/App";
+import GlobalStyle from "./globaStyles";
 import { useTheme } from "./hooks/useTheme";
 import GlobalTheme from "./theme/GlobalTheme";
-import GlobalStyle from "./styles";
-import Home from "./components/app/App";
 
 const App = () => {
   const theme = useTheme(GlobalTheme);
