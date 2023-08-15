@@ -19,4 +19,6 @@ export interface Theme {
   backgroundSecondary: string;
 
   backgroundImageURL: string;
+
+  togglerIconURL: string;
 }

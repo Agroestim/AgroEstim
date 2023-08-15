@@ -1,34 +1,60 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
+import {
+  BrandingLink,
+  Hamburger,
+  NavItem,
+  NavbarBrandLayout,
+  NavbarBrandWrapper,
+  NavbarCollapseLayout,
+  NavbarCollapseWrapper,
+  NavbarLayout,
+  NavbarNav,
+  NavbarWrapper,
+} from "./styled";
 
 const NavbarCollapse: FC = () => {
   return (
-    <div className="NavbarCollapse">
-      <button className="NavbarToggleButton">
-        <i className="NavHamburger"></i>
-      </button>
-      <ul className="Nav">
-        <li className="NavItem Active">AgroEstim</li>
-        <li className="NavItem Disable">AgroGraph</li>
-      </ul>
-    </div>
+    <NavbarCollapseWrapper>
+      <NavbarCollapseLayout>
+        <NavbarNav>
+          <NavItem className="Active">AgroEstim</NavItem>
+          <NavItem className="Disable">AgroGraph</NavItem>
+        </NavbarNav>
+        <Hamburger></Hamburger>
+      </NavbarCollapseLayout>
+    </NavbarCollapseWrapper>
   );
 };
 
 const Navbar: FC = () => {
   return (
-    <div className="NavbarWrapper">
-      <nav className="NavbarLayout">
-        <div className="NavbarContainer">
-          <div className="NavbarBrandLayout">
+    <NavbarWrapper>
+      <NavbarLayout>
+        <NavbarBrandWrapper>
+          <NavbarBrandLayout>
             {/* Brand assets provider */}
-            <Link to={"/"}>Agroestim</Link>
-          </div>
-
-          <NavbarCollapse />
-        </div>
-      </nav>
-    </div>
+            <BrandingLink to={"/"}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M8 5v10a1 1 0 0 0 1 1h10" />
+                <path d="M5 8h10a1 1 0 0 1 1 1v10" />
+              </svg>
+            </BrandingLink>
+          </NavbarBrandLayout>
+        </NavbarBrandWrapper>
+        <NavbarCollapse />
+      </NavbarLayout>
+    </NavbarWrapper>
   );
 };
 

@@ -22,6 +22,8 @@ export default createGlobalStyle`
   #root {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.75rem;
   }
+  
+  /* TODO: Definir los estilos de los textos */
 `;

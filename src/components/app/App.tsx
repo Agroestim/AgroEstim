@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Footer from "../common/Footer";
-import Header from "../common/Header";
+// import Footer from "../common/Footer";
+// import Header from "../common/Header";
 import Navbar from "../common/Navbar";
 
 const Home: FC = () => {
@@ -8,9 +8,10 @@ const Home: FC = () => {
     <div className="AppWrapper">
       <div className="AppLayout">
         <Navbar></Navbar>
-        <Header></Header>
-        <div className="Main"></div>
-        <Footer></Footer>
+        {/* <Header></Header> */}
+        {/* <div className="Main"></div> */}
+        {/* <Footer></Footer> */}
+        {/* <Notify></Notify> */}
       </div>
     </div>
   );

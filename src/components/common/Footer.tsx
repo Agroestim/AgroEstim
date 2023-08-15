@@ -13,8 +13,8 @@ const Footer: FC = () => {
 
           <div className="AboutUsLayout">
             <p className="Lead Bolder">
-              Aplicacion desarrollada en colaboración con el
-              <span className="TextAccent">INTA</span> y el equipo de
+              Aplicacion desarrollada en colaboración con el{" "}
+              <span className="TextAccent">INTA</span> y el equipo de{" "}
               <span className="TextAccent">Agroestim</span>.
             </p>
           </div>

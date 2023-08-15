@@ -28,6 +28,9 @@ export default {
 
     backgroundImageURL:
       "https://campus.inta.gob.ar/pluginfile.php/1/theme_trema/loginbackgroundimage/1687355990/bg_login.jpg",
+
+    togglerIconURL:
+      "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e",
   },
   [ThemeTypes.light]: {
     textPrimary: "#3f3f3f",
@@ -48,5 +51,8 @@ export default {
 
     backgroundImageURL:
       "https://campus.inta.gob.ar/pluginfile.php/1/theme_trema/loginbackgroundimage/1687355990/bg_login.jpg",
+
+    togglerIconURL:
+      "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e",
   },
-} as GlobalTheme;
+} satisfies GlobalTheme;
