@@ -1,19 +1,20 @@
 import { FC } from "react";
 // import Footer from "../common/Footer";
 // import Header from "../common/Header";
-import Navbar from "../common/Navbar";
+import Navbar from "../common/navbar/Navbar";
+import { AppLayout, AppWrapper } from "./styled";
 
 const Home: FC = () => {
   return (
-    <div className="AppWrapper">
-      <div className="AppLayout">
+    <AppWrapper>
+      <AppLayout>
         <Navbar></Navbar>
         {/* <Header></Header> */}
         {/* <div className="Main"></div> */}
         {/* <Footer></Footer> */}
         {/* <Notify></Notify> */}
-      </div>
-    </div>
+      </AppLayout>
+    </AppWrapper>
   );
 };
 

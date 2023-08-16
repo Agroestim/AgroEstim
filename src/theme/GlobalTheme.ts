@@ -14,7 +14,7 @@ export default {
     textSecondary: "#3f3f3f",
 
     colorPrimary: "#",
-    colorSecondary: "#",
+    colorSecondary: "#f9f9f9",
     colorAccent: "#99cb33",
     colorLight: "#f2f2f2",
     colorDark: "#373a3c",
@@ -23,8 +23,8 @@ export default {
     colorWarning: "#ffce00",
     colorDanger: "#ef5350",
 
-    backgroundPrimary: "",
-    backgroundSecondary: "",
+    backgroundPrimary: "#3f3f3f",
+    backgroundSecondary: "#f2f2f2",
 
     backgroundImageURL:
       "https://campus.inta.gob.ar/pluginfile.php/1/theme_trema/loginbackgroundimage/1687355990/bg_login.jpg",
@@ -36,7 +36,7 @@ export default {
     textPrimary: "#3f3f3f",
     textSecondary: "#f2f2f2",
 
-    colorPrimary: "#",
+    colorPrimary: "#f9f9f9",
     colorSecondary: "#",
     colorAccent: "#99cb33",
     colorLight: "#f2f2f2",
@@ -46,8 +46,8 @@ export default {
     colorWarning: "#ffce00",
     colorDanger: "#ef5350",
 
-    backgroundPrimary: "",
-    backgroundSecondary: "",
+    backgroundPrimary: "#f2f2f2",
+    backgroundSecondary: "#3f3f3f",
 
     backgroundImageURL:
       "https://campus.inta.gob.ar/pluginfile.php/1/theme_trema/loginbackgroundimage/1687355990/bg_login.jpg",
