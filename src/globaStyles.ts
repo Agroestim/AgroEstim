@@ -5,7 +5,7 @@ import { createGlobalStyle } from "styled-components";
  */
 export default createGlobalStyle`
   :root {
-    font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     line-height: 1.5;
     font-weight: 400;
@@ -19,11 +19,24 @@ export default createGlobalStyle`
     background-color: ${(props) => props.theme.backgroundPrimary};
   }
 
+  body {
+    margin: 0;
+  }
+
   #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 1.75rem;
+    /* max-height: 1280px; */
+    width: 100%;
   }
   
-  /* TODO: Definir los estilos de los textos */
+  /* TODO: Exportar los estilos base desde figma. */
+
+  /* HERE: Text styles */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Zilla Slab", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 2.08px;
+  }
+
+  p {
+    font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  } 
 `;

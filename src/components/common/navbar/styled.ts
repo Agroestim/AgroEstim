@@ -2,38 +2,44 @@ import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 // Link
-export const BrandingLink = styled(Link)`
-  padding: 0 10px;
-`;
+export const BrandingLink = styled(Link)``;
 
 // Navbar components
 
 export const NavbarWrapper = styled.div`
-  --ags-guetter-x: 1.5rem;
-  height: 44px;
-  padding-right: calc(var(--ags-guetter-x) * 0.5);
-  padding-left: calc(var(--ags-guetter-x) * 0.5);
-  padding-bottom: 24px;
-  padding-top: 12px;
+  width: 358px;
+  max-width: -webkit-fill-available;
+  height: 32px;
+  background-color: ${({ theme }) => theme.colorLight};
+  box-shadow: 2px 2px 12px #575757;
+  border-radius: 2px;
 `;
 
 export const NavbarLayout = styled.nav`
-  height: 32px;
-  display: flex;
+  height: 100%;
+  width: -webkit-fill-available;
+  padding: 0 10px;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
+  display: inline-flex;
 `;
 
-export const NavbarBrandWrapper = styled.div`
-  width: auto;
-  height: auto;
-`;
+export const BrandWrapper = styled.div``;
 
-export const NavbarBrandLayout = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+export const Branding = styled.div`
+  & span {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2.08;
+    word-wrap: break-word;
+    color: #575757;
+  }
+
+  & span.brand-accent {
+    /* color: ${({ theme }) => theme}; */
+    color: #ef5350;
+  }
 `;
 
 export const NavbarCollapseWrapper = styled.div`
@@ -64,12 +70,17 @@ export const NavItem = styled.li`
 `;
 
 export const Hamburger = styled.button`
-  padding: 0 10px;
-  align-self: center;
-  height: 25px;
-  width: 25px;
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
   border: none;
-  background: ${({ theme }) => `url("${theme.togglerIconURL}")`} no-repeat
-    center;
-  cursor: none;
+  background: none;
+
+  & svg {
+    width: 12px;
+    height: 12px;
+  }
 `;

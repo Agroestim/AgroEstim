@@ -19,7 +19,7 @@ export default {
     colorLight: "#f2f2f2",
     colorDark: "#373a3c",
     colorInfo: "#2cb9ee",
-    colorSuccess: "#2e7d33",
+    colorSuccess: "#56af5c",
     colorWarning: "#ffce00",
     colorDanger: "#ef5350",
 

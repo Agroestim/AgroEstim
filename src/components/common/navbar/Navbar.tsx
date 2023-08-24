@@ -1,10 +1,9 @@
 import { FC } from "react";
 import {
-  BrandingLink,
+  BrandWrapper,
+  Branding,
   Hamburger,
   NavItem,
-  NavbarBrandLayout,
-  NavbarBrandWrapper,
   NavbarCollapseLayout,
   NavbarCollapseWrapper,
   NavbarLayout,
@@ -30,29 +29,28 @@ const Navbar: FC = () => {
   return (
     <NavbarWrapper>
       <NavbarLayout>
-        <NavbarBrandWrapper>
-          <NavbarBrandLayout>
-            {/* Brand assets provider */}
-            <BrandingLink to={"/"}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M8 5v10a1 1 0 0 0 1 1h10" />
-                <path d="M5 8h10a1 1 0 0 1 1 1v10" />
-              </svg>
-            </BrandingLink>
-          </NavbarBrandLayout>
-        </NavbarBrandWrapper>
-        <NavbarCollapse />
+        <BrandWrapper>
+          <Branding>
+            <span className="brand-accent">/</span>
+            <span>Agroestim</span>
+          </Branding>
+        </BrandWrapper>
+        <Hamburger>
+          <svg
+            viewBox="0 0 14 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="M1 7H13M1 13H13M1 1H13"
+                stroke="#50B7B2"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </g>
+          </svg>
+        </Hamburger>
       </NavbarLayout>
     </NavbarWrapper>
   );
