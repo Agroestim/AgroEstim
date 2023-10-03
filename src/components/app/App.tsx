@@ -2,7 +2,7 @@ import { FC } from "react";
 // import Footer from "../common/Footer";
 // import Header from "../common/Header";
 import Navbar from "../common/navbar/Navbar";
-import { AppLayout, AppWrapper } from "./styled";
+import { AppLayout, AppWrapper, MainLayout, MainWrapper } from "./styled";
 
 const Home: FC = () => {
   return (
@@ -10,7 +10,11 @@ const Home: FC = () => {
       <AppLayout>
         <Navbar></Navbar>
         {/* <Header></Header> */}
-        {/* <div className="Main"></div> */}
+        <MainWrapper>
+          <MainLayout>
+            <p>Lorem ipsum</p>
+          </MainLayout>
+        </MainWrapper>
         {/* <Footer></Footer> */}
         {/* <Notify></Notify> */}
       </AppLayout>

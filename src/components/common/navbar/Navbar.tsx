@@ -45,8 +45,8 @@ const Navbar: FC = () => {
               <path
                 d="M1 7H13M1 13H13M1 1H13"
                 stroke="#50B7B2"
-                stroke-width="2"
-                stroke-linecap="round"
+                strokeWidth="2"
+                strokeLinecap="round"
               />
             </g>
           </svg>

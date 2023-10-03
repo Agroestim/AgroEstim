@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+import BackgroundImage from "./assets/img/390x843_BACKGROUND_BRAND_IMAGE.png";
+
 /**
  * Representa a los estilos glbales de la aplicacion.
  */
@@ -19,19 +21,23 @@ export default createGlobalStyle`
     background-color: ${(props) => props.theme.backgroundPrimary};
   }
 
-  body {
+  html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
   }
 
   #root {
     /* max-height: 1280px; */
     width: 100%;
+    height: 100%;
+    background: url(${BackgroundImage}) no-repeat cover;
   }
   
   /* TODO: Exportar los estilos base desde figma. */
 
   /* HERE: Text styles */
-  h1, h2, h3, h4, h5, h6 {
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     font-family: "Zilla Slab", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     letter-spacing: 2.08px;
   }

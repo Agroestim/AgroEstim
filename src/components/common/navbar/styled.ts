@@ -7,7 +7,6 @@ export const BrandingLink = styled(Link)``;
 // Navbar components
 
 export const NavbarWrapper = styled.div`
-  width: 358px;
   max-width: -webkit-fill-available;
   height: 32px;
   background-color: ${({ theme }) => theme.colorLight};
@@ -29,7 +28,7 @@ export const BrandWrapper = styled.div``;
 
 export const Branding = styled.div`
   & span {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: 2.08;
     word-wrap: break-word;

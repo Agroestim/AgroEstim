@@ -1,10 +1,11 @@
 import { FC, useEffect, useState } from "react";
 import Navbar from "../common/navbar/Navbar";
 import {
-  FixedPanelWrapper,
-  FloatingSettingsLayout,
-  FloatingSettingsWrapper,
-  MainViewWrapper,
+  AgroGraphLayout,
+  AgroGraphWrapper,
+  FixedDashboardLayout,
+  FixedDashboardWrapper,
+  FloatingDashboardWrapper,
 } from "./styles";
 
 const Agrograph: FC = () => {
@@ -15,40 +16,26 @@ const Agrograph: FC = () => {
   }, []);
 
   return (
-    <div
-      className="Iphone14DashboardPage"
-      style={{
-        width: "100%",
-        background: "#EEEEEE",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        gap: 10,
-        display: "flex",
-      }}
-    >
-      <Navbar />
-
-      <MainViewWrapper>
-        <FixedPanelWrapper
-          isVisible={!isSettingsVisibilityToggled}
-        ></FixedPanelWrapper>
-
-        <FloatingSettingsWrapper isVissible={isSettingsVisibilityToggled}>
-          <FloatingSettingsLayout>
+    <AgroGraphWrapper>
+      <AgroGraphLayout>
+        <Navbar />
+        {isSettingsVisibilityToggled ? (
+          <FloatingDashboardWrapper>
             <div
               className="OptionsBar"
               style={{
                 alignSelf: "stretch",
+                height: 88,
                 padding: 4,
                 background: "white",
                 boxShadow: "2px 2px 12px rgba(87.13, 87.13, 87.13, 0.50)",
                 borderRadius: 2,
                 overflow: "hidden",
-                justifyContent: "space-between",
+                flexDirection: "column",
+                justifyContent: "flex-start",
                 alignItems: "flex-start",
                 gap: 8,
-                display: "inline-flex",
+                display: "flex",
               }}
             >
               <div
@@ -56,20 +43,35 @@ const Agrograph: FC = () => {
                 style={{
                   paddingLeft: 4,
                   paddingRight: 4,
-                  background: "#50B7B2",
                   borderRadius: 1,
                   justifyContent: "center",
                   alignItems: "center",
                   gap: 4,
-                  display: "flex",
+                  display: "inline-flex",
                 }}
               >
+                <div
+                  className="TablerIconPlant2"
+                  style={{ width: 12, height: 12, position: "relative" }}
+                >
+                  <div
+                    className="VectorStroke"
+                    style={{
+                      width: 10.5,
+                      height: 8,
+                      left: 0.75,
+                      top: 1.75,
+                      position: "absolute",
+                      background: "#039BE5",
+                    }}
+                  ></div>
+                </div>
                 <div
                   className="Label"
                   style={{
                     textAlign: "center",
                     color: "#575757",
-                    fontSize: 10,
+                    fontSize: 12,
                     fontFamily: "Noto Sans",
                     fontWeight: "700",
                     wordWrap: "break-word",
@@ -77,49 +79,48 @@ const Agrograph: FC = () => {
                 >
                   Variantes
                 </div>
-                <div
-                  className="TablerIconPlant2"
-                  style={{
-                    width: 12,
-                    height: 12,
-                    paddingTop: 1.75,
-                    paddingBottom: 2.25,
-                    paddingLeft: 0.75,
-                    paddingRight: 0.75,
-                    justifyContent: "center",
-                    alignItems: "center",
-                    display: "flex",
-                  }}
-                >
-                  <div
-                    className="VectorStroke"
-                    style={{
-                      width: 10.5,
-                      height: 8,
-                      background: "rgba(255, 255, 255, 0.40)",
-                    }}
-                  ></div>
-                </div>
               </div>
+              <div
+                className="Separator1"
+                style={{
+                  alignSelf: "stretch",
+                  height: 0,
+                  border: "0.88px #8BC1C3 solid",
+                }}
+              ></div>
               <div
                 className="Selectors"
                 style={{
                   paddingLeft: 4,
                   paddingRight: 4,
-                  background: "#50B7B2",
-                  borderRadius: 1,
                   justifyContent: "center",
                   alignItems: "center",
                   gap: 4,
-                  display: "flex",
+                  display: "inline-flex",
                 }}
               >
+                <div
+                  className="TablerIconAffiliateFilled"
+                  style={{ width: 12, height: 12, position: "relative" }}
+                >
+                  <div
+                    className="Vector"
+                    style={{
+                      width: 9,
+                      height: 9,
+                      left: 1.5,
+                      top: 1.5,
+                      position: "absolute",
+                      background: "#039BE5",
+                    }}
+                  ></div>
+                </div>
                 <div
                   className="Label"
                   style={{
                     textAlign: "center",
                     color: "#575757",
-                    fontSize: 10,
+                    fontSize: 12,
                     fontFamily: "Noto Sans",
                     fontWeight: "700",
                     wordWrap: "break-word",
@@ -127,72 +128,55 @@ const Agrograph: FC = () => {
                 >
                   Variantes Geneticas
                 </div>
-                <div
-                  className="TablerIconAffiliateFilled"
-                  style={{
-                    width: 12,
-                    height: 12,
-                    padding: 1.5,
-                    justifyContent: "center",
-                    alignItems: "center",
-                    display: "flex",
-                  }}
-                >
-                  <div
-                    className="Vector"
-                    style={{
-                      width: 9,
-                      height: 9,
-                      background: "rgba(255, 255, 255, 0.40)",
-                    }}
-                  ></div>
-                </div>
               </div>
+              <div
+                className="Separator2"
+                style={{
+                  alignSelf: "stretch",
+                  height: 0,
+                  border: "0.88px #8BC1C3 solid",
+                }}
+              ></div>
               <div
                 className="Selectors"
                 style={{
                   paddingLeft: 4,
                   paddingRight: 4,
-                  background: "#50B7B2",
                   borderRadius: 1,
                   justifyContent: "center",
                   alignItems: "center",
                   gap: 4,
-                  display: "flex",
+                  display: "inline-flex",
                 }}
               >
                 <div
-                  className="Label"
-                  style={{
-                    textAlign: "center",
-                    color: "#575757",
-                    fontSize: 10,
-                    fontFamily: "Noto Sans",
-                    fontWeight: "700",
-                    wordWrap: "break-word",
-                  }}
-                >
-                  Grupos de madurez
-                </div>
-                <div
                   className="TablerIconAlignBoxBottomCenterFilled"
-                  style={{
-                    width: 12,
-                    height: 12,
-                    padding: 1,
-                    justifyContent: "center",
-                    alignItems: "center",
-                    display: "flex",
-                  }}
+                  style={{ width: 12, height: 12, position: "relative" }}
                 >
                   <div
                     className="Vector"
                     style={{
                       width: 10,
                       height: 10,
-                      background: "rgba(255, 255, 255, 0.40)",
+                      left: 1,
+                      top: 1,
+                      position: "absolute",
+                      background: "#039BE5",
                     }}
                   ></div>
+                </div>
+                <div
+                  className="Label"
+                  style={{
+                    textAlign: "center",
+                    color: "#575757",
+                    fontSize: 12,
+                    fontFamily: "Noto Sans",
+                    fontWeight: "700",
+                    wordWrap: "break-word",
+                  }}
+                >
+                  Grupos de madurez
                 </div>
               </div>
             </div>
@@ -206,10 +190,16 @@ const Agrograph: FC = () => {
                 borderRadius: 2,
               }}
             />
-          </FloatingSettingsLayout>
-        </FloatingSettingsWrapper>
-      </MainViewWrapper>
-    </div>
+          </FloatingDashboardWrapper>
+        ) : (
+          <FixedDashboardWrapper>
+            <FixedDashboardLayout>
+              Aqui iria la vista para los resultados de la busqueda.
+            </FixedDashboardLayout>
+          </FixedDashboardWrapper>
+        )}
+      </AgroGraphLayout>
+    </AgroGraphWrapper>
   );
 };
 
