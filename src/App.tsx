@@ -1,25 +1,29 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import Agrograph from "./components/agrograf/Agrograph";
+import Agrovar from "./components/agrovar/Agrovar";
 import Home from "./components/app/App";
 import Dashboard from "./components/app/Dashboard";
 import GlobalStyle from "./globaStyles";
 import { useTheme } from "./hooks/useTheme";
 import GlobalTheme from "./theme/GlobalTheme";
 
-const App = () => {
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route element={<Home></Home>} path="/">
+      <Route element={<Dashboard></Dashboard>} path="/graphql"></Route>
+      <Route element={<Agrovar></Agrovar>} path="/agrovar"></Route>
+      <Route element={<p>🤔</p>} path="/agroestim"></Route>
+    </Route>
+  )
+);
+
+export default function App() {
   const theme = useTheme(GlobalTheme);
-  const router = createBrowserRouter([
-    { path: "/", element: <Home /> },
-    {
-      path: "/dashboard",
-      element: <Dashboard />,
-      children: [
-        { path: "agroestim", element: <h1>Agroestim</h1> },
-        { path: "agrograph", element: <Agrograph /> },
-      ],
-    },
-  ]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -27,6 +31,4 @@ const App = () => {
       <RouterProvider router={router}></RouterProvider>
     </ThemeProvider>
   );
-};
-
-export default App;
+}

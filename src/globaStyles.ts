@@ -1,7 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-import BackgroundImage from "./assets/img/390x843_BACKGROUND_BRAND_IMAGE.png";
-
 /**
  * Representa a los estilos glbales de la aplicacion.
  */
@@ -31,7 +29,6 @@ export default createGlobalStyle`
     /* max-height: 1280px; */
     width: 100%;
     height: 100%;
-    background: url(${BackgroundImage}) no-repeat cover;
   }
   
   /* TODO: Exportar los estilos base desde figma. */

@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-export const AppWrapper = styled.div``;
+export const AppWrapper = styled.div`
+  padding: 10px;
+`;
 
-export const AppLayout = styled.div``;
-
-export const MainWrapper = styled.main``;
-
-export const MainLayout = styled.div``;
+export const AppLayout = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;

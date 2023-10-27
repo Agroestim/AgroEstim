@@ -1,25 +1,14 @@
-import { FC } from "react";
-// import Footer from "../common/Footer";
-// import Header from "../common/Header";
-import Navbar from "../common/navbar/Navbar";
-import { AppLayout, AppWrapper, MainLayout, MainWrapper } from "./styled";
+import { Outlet } from "react-router-dom";
+import { CommonNavbar } from "../common/navbar/Navbar";
+import { AppLayout, AppWrapper } from "./styled";
 
-const Home: FC = () => {
+export default function App() {
   return (
     <AppWrapper>
       <AppLayout>
-        <Navbar></Navbar>
-        {/* <Header></Header> */}
-        <MainWrapper>
-          <MainLayout>
-            <p>Lorem ipsum</p>
-          </MainLayout>
-        </MainWrapper>
-        {/* <Footer></Footer> */}
-        {/* <Notify></Notify> */}
+        <CommonNavbar></CommonNavbar>
+        <Outlet></Outlet>
       </AppLayout>
     </AppWrapper>
   );
-};
-
-export default Home;
+}
