@@ -7,9 +7,11 @@ export default createGlobalStyle`
   :root {
     font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
       Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    line-height: 1.5;
+    font-synthesis: none;    
     font-weight: 400;
-    font-synthesis: none;
+    letter-spacing: 0px;
+    line-height: normal;
+    
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -29,13 +31,14 @@ export default createGlobalStyle`
     /* max-height: 1280px; */
     width: 100%;
     height: 100%;
+
+    display: flex;
+    justify-content: center;
   }
   
-  /* TODO: Exportar los estilos base desde figma. */
-
-  /* HERE: Text styles */
-  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: "Zilla Slab", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
     letter-spacing: 2.08px;
   }
 

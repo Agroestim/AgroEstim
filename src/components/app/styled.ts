@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const AppWrapper = styled.div`
-  padding: 10px;
+  max-width: 1280px;
 `;
 
 export const AppLayout = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  width: 100%;
 `;

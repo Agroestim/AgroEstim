@@ -1,12 +1,13 @@
-import { FC } from "react";
+import { AsideControlPanel } from "./AsideControlPanel";
+import { MainView } from "./MainView";
+import { ContainerLayout } from "./styles";
 
-const Agrovar: FC = () => {
+export function Agrovar() {
   return (
-    <aside className="settings-control">
-      <div className="control-select-query-operation"></div>
-      <div className="control-query-form-operation"></div>
-    </aside>
-  );
-};
+    <ContainerLayout>
+      <AsideControlPanel></AsideControlPanel>
 
-export default Agrovar;
+      <MainView></MainView>
+    </ContainerLayout>
+  );
+}
