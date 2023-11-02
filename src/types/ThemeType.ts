@@ -1,4 +1,4 @@
-import { Theme } from "../theme/BaseTheme";
+import { Theme } from "@/theme/BaseTheme";
 
 /**
  * Tipos de estado para el proveedor de temas de color.

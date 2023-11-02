@@ -10,17 +10,17 @@ import {
 const themeType =
   (localStorage.getItem(THEME_KEY) as ThemeType) || ThemeTypes.light;
 
-const stateInitialState: ThemePayload = {
+const initialState: ThemePayload = {
   type: themeType,
 };
 
 /**
  * `ThemeReducer`
  */
-export default (
-  state: ThemePayload = stateInitialState,
+export default function themeReducer(
+  state: ThemePayload = initialState,
   action: ThemeAction
-) => {
+) {
   const { type, payload } = action;
 
   switch (type) {
@@ -30,4 +30,4 @@ export default (
     default:
       return state;
   }
-};
+}

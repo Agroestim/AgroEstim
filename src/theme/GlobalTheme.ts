@@ -1,4 +1,4 @@
-import { GlobalTheme, ThemeTypes } from "../types/ThemeType";
+import { GlobalTheme, ThemeTypes } from "@/types/ThemeType";
 
 /**
  * Representa el valor por defecto para el proveedor de temas.

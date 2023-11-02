@@ -69,10 +69,10 @@ export type TechnicalDataType = {
    *
    * NOTE: Normally start counting at 1 and ends at 2 repetitions.
    */
-  paperRepetiton: number;
+  paperRepetition: number;
 
   /**
    * Represents a forgeing key which contains the crop-specific variety data.
    */
-  paprFk: VarietyTechnicalDataType;
+  paperFk: VarietyTechnicalDataType;
 };

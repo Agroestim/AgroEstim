@@ -1,4 +1,5 @@
 import { ApolloProvider } from "@apollo/client";
+import { Provider } from "react-redux";
 import {
   Route,
   RouterProvider,
@@ -11,6 +12,7 @@ import Home from "./components/app/App";
 import GlobalStyle from "./globaStyles";
 import { useApollo } from "./hooks/useApollo";
 import { useTheme } from "./hooks/useTheme";
+import store from "./store";
 import GlobalTheme from "./theme/GlobalTheme";
 
 const router = createBrowserRouter(
@@ -31,11 +33,13 @@ export default function App() {
   const client = useApollo();
 
   return (
-    <ApolloProvider client={client}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <RouterProvider router={router}></RouterProvider>
-      </ThemeProvider>
-    </ApolloProvider>
+    <Provider store={store}>
+      <ApolloProvider client={client}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <RouterProvider router={router}></RouterProvider>
+        </ThemeProvider>
+      </ApolloProvider>
+    </Provider>
   );
 }

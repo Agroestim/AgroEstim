@@ -1,16 +1,55 @@
 import { gql } from "@apollo/client";
 
-export const GET_VARIETIES_QUERY = gql`
-  query GetVarietyesRanking($varieties: [String]!) {
+export const GET_LOCATION_RANKING_QUERY = gql`
+  query getLocationRanking($locations: [String]!) {
+    locationRanking(locations: $locations) {
+      paperReference
+      documentId
+      longitude
+      location
+      latitude
+      paperType
+      year
+      paperPepetition
+      paperFk {
+        grainsCount
+        grainsPerSpike
+        humidityPercentage
+        paperId
+        performance
+        ph
+        relativePerformance
+        proteinsPercentage
+        variety
+        weightPerThousandGrains
+      }
+    }
+  }
+`;
+
+export const GET_VARIETIES_COMPARATION_QUERY = gql`
+  query getVarietiesComparationQuery($varieties: [String]!) {
     varietyComparator(varieties: $varieties) {
       documentId
       latitude
       location
       longitude
       paperPepetition
-      paperReference
       paperType
       year
+      paperReference
+      paperFk {
+        grainsCount
+        grainsPerSpike
+        humidityPercentage
+        paperId
+        performance
+        ph
+        proteinsPercentage
+        relativePerformance
+        variety
+        weightPerThousandGrains
+      }
     }
   }
 `;

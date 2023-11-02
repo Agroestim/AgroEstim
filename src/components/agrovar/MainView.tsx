@@ -1,5 +1,4 @@
-// import {} from "@tanstack/react-table";
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { Button } from "../common/buttons/styled";
 import { Spinner } from "../common/spinner/styled";
 import { TableViewComponent } from "./TableView";
@@ -10,24 +9,11 @@ import {
   SettingsBar,
 } from "./styles";
 
-const GET_VARIETIES_QUERY = gql`
-  query GetVarietyesRanking($varieties: [String]!) {
-    varietyComparator(varieties: $varieties) {
-      documentId
-      latitude
-      location
-      longitude
-      paperPepetition
-      paperReference
-      paperType
-      year
-    }
-  }
-`;
+import { GET_LOCATION_RANKING_QUERY } from "@/graphql/Querys";
 
 export function MainView() {
-  const { loading, error } = useQuery(GET_VARIETIES_QUERY, {
-    variables: { varieties: ["ARSLAK"] },
+  const { loading, error } = useQuery(GET_LOCATION_RANKING_QUERY, {
+    variables: { locations: ["laboulaye"] },
   });
 
   return (
