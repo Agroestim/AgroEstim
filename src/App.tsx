@@ -7,7 +7,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { Agrovar } from "./components/agrovar/Agrovar";
+import { AgrovarViewComponent } from "./components/agrovar/Agrovar";
 import Home from "./components/app/App";
 import GlobalStyle from "./globaStyles";
 import { useApollo } from "./hooks/useApollo";
@@ -22,7 +22,10 @@ const router = createBrowserRouter(
       path="/"
       errorElement={<h1>Page not found ⛔</h1>}
     >
-      <Route element={<Agrovar></Agrovar>} path="/agrovar"></Route>
+      <Route
+        element={<AgrovarViewComponent></AgrovarViewComponent>}
+        path="/agrovar"
+      ></Route>
       <Route element={<p>🤔</p>} path="/agroestim"></Route>
     </Route>
   )

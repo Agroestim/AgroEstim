@@ -1,13 +1,12 @@
-import { AsideControlPanel } from "./AsideControlPanel";
-import { MainView } from "./MainView";
+import { AsideViewComponent } from "./AsideView";
+import { MainViewComponent } from "./MainView";
 import { ContainerLayout } from "./styles";
 
-export function Agrovar() {
+export function AgrovarViewComponent() {
   return (
     <ContainerLayout>
-      <AsideControlPanel></AsideControlPanel>
-
-      <MainView></MainView>
+      <AsideViewComponent />
+      <MainViewComponent />
     </ContainerLayout>
   );
 }

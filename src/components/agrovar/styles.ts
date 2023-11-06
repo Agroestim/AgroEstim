@@ -5,7 +5,7 @@ export const ContainerLayout = styled.div`
   flex-direction: row;
 `;
 
-export const AsideControlPanelWrapper = styled.aside`
+export const AsideWrapper = styled.aside`
   height: 100%;
 
   max-width: 315px;
@@ -17,33 +17,23 @@ export const AsideControlPanelWrapper = styled.aside`
   border-right-width: 1px;
 `;
 
-export const AsideControlPanelLayout = styled.div`
+export const AsideLayout = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
 `;
 
-export const ControlQuerySelection = styled.div`
+export const FormWrapper = styled.form`
   width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  align-self: stretch;
-`;
-
-export const ControlFormWrapper = styled.div`
-  display: flex;
-  flex: 1;
-  flex-grow: 1;
+  flex: 1 0 0;
   flex-direction: column;
   align-items: center;
   align-self: stretch;
   gap: 21px;
   justify-content: space-around;
   position: relative;
-  width: 100%;
 `;
 
 export const MainViewWrapper = styled.main`

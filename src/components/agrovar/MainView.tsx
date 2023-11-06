@@ -1,21 +1,8 @@
-import { useQuery } from "@apollo/client";
 import { Button } from "../common/buttons/styled";
-import { Spinner } from "../common/spinner/styled";
 import { TableViewComponent } from "./TableView";
-import {
-  FetchStatusWrapper,
-  MainViewLayout,
-  MainViewWrapper,
-  SettingsBar,
-} from "./styles";
+import { MainViewLayout, MainViewWrapper, SettingsBar } from "./styles";
 
-import { GET_LOCATION_RANKING_QUERY } from "@/graphql/Querys";
-
-export function MainView() {
-  const { loading, error } = useQuery(GET_LOCATION_RANKING_QUERY, {
-    variables: { locations: ["laboulaye"] },
-  });
-
+export function MainViewComponent() {
   return (
     <MainViewWrapper>
       <MainViewLayout>
@@ -41,10 +28,10 @@ export function MainView() {
           </Button>
         </SettingsBar>
 
-        <FetchStatusWrapper>
+        {/* <FetchStatusWrapper>
           {error ? <span>{error?.message}</span> : null}
           {loading ? <Spinner /> : null}
-        </FetchStatusWrapper>
+        </FetchStatusWrapper> */}
 
         <TableViewComponent></TableViewComponent>
       </MainViewLayout>

@@ -6,7 +6,7 @@ import {
 } from "@tanstack/react-table";
 import { useState } from "react";
 
-let defaultData: TechnicalDataType[] = [];
+const defaultData: TechnicalDataType[] = [];
 
 const columnHelper = createColumnHelper<TechnicalDataType>();
 const columns = [
@@ -103,7 +103,7 @@ const columns = [
 ];
 
 export function TableViewComponent() {
-  const [tableData, setTableData] = useState(() => [...defaultData]);
+  const [tableData] = useState(() => [...defaultData]);
   const consumableTable = useReactTable({
     tableData,
     columns,
