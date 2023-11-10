@@ -20,13 +20,18 @@ const router = createBrowserRouter(
     <Route
       element={<Home></Home>}
       path="/"
-      errorElement={<h1>Page not found ⛔</h1>}
+      errorElement={<h1>An error has ocurred | ⛔</h1>}
     >
       <Route
         element={<AgrovarViewComponent></AgrovarViewComponent>}
+        errorElement={<h1>An error has ocurred.</h1>}
         path="/agrovar"
-      ></Route>
-      <Route element={<p>🤔</p>} path="/agroestim"></Route>
+      />
+      <Route
+        element={<p>Still devlopment</p>}
+        errorElement={<h1>An error has ocurred | ⛔</h1>}
+        path="/agroestim"
+      />
     </Route>
   )
 );

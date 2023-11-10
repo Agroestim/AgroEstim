@@ -25,7 +25,6 @@ export const AsideLayout = styled.div`
 `;
 
 export const FormWrapper = styled.form`
-  width: 100%;
   display: flex;
   flex: 1 0 0;
   flex-direction: column;
@@ -34,6 +33,12 @@ export const FormWrapper = styled.form`
   gap: 21px;
   justify-content: space-around;
   position: relative;
+  font-family: "Zilla Slab", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #575757;
 `;
 
 export const MainViewWrapper = styled.main`
@@ -48,18 +53,7 @@ export const MainViewLayout = styled.div`
   gap: 10px;
 `;
 
-export const SettingsBar = styled.div`
-  width: 100%;
-  max-height: 50px;
-  display: inline-flex;
-  flex-flow: row-reverse;
-  gap: 10px;
-
-  padding: 8px 0px;
-  border-bottom: 1px solid #575757;
-`;
-
-export const FetchStatusWrapper = styled.div`
+export const GraphqlFetchStatus = styled.div`
   display: grid;
   place-content: center;
   width: max-content;
@@ -72,4 +66,25 @@ export const FetchStatusWrapper = styled.div`
     font-weight: 500;
     color: #da4545;
   }
+`;
+
+export const FieldsetComponent = styled.fieldset`
+  border: none;
+  width: -webkit-fill-available;
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  flex-direction: column;
+  flex-grow: 1;
+`;
+
+export const LegendComponent = styled.legend`
+  *& {
+    font-size: 20px;
+    font-weight: 800;
+  }
+`;
+
+export const LabelComponent = styled.label`
+  font-weight: 500;
 `;

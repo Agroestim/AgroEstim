@@ -1,13 +1,16 @@
-import { StrictMode } from "react";
+import { StrictMode, Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import { Provider } from "react-redux";
+import App from "./App";
+import { Spinner } from "./components/common/spinner/styled";
 import store from "./store";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <Suspense fallback={<Spinner></Spinner>}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </Suspense>
   </StrictMode>
 );
