@@ -5,3 +5,7 @@ export type ReducerStatePropType = {
   showTableView: boolean;
   showChartView: boolean;
 };
+
+export type DispatchViewProp = {
+  dispatchView: React.Dispatch<ReducerActionPropType>;
+};

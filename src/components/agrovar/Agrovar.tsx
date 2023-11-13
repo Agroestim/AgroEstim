@@ -7,8 +7,8 @@ import {
   AsideLayout,
   AsideWrapper,
   ContainerLayout,
-  MainViewLayout,
-  MainViewWrapper,
+  MainLayout,
+  MainWrapper,
 } from "./styles";
 
 export function AgrovarViewComponent() {
@@ -25,21 +25,19 @@ export function AgrovarViewComponent() {
           <GraphqlQueryFormComponent dispatchView={dispatchDisplayedViews} />
         </AsideLayout>
       </AsideWrapper>
-      <MainViewWrapper>
-        <MainViewLayout>
+      <MainWrapper>
+        <MainLayout>
           {/* <FetchStatusWrapper>
           {error ? <span>{error?.message}</span> : null}
-          {loading ? <Spinner /> : null}
-          </FetchStatusWrapper> */}
+        {loading ? <Spinner /> : null}
+        </FetchStatusWrapper> */}
 
-          <TableViewComponent
-            hiddeView={displayedViewsState.showTableView}
-          ></TableViewComponent>
-          <ChartViewcomponent
-            hiddeView={displayedViewsState.showChartView}
-          ></ChartViewcomponent>
-        </MainViewLayout>
-      </MainViewWrapper>
+          {/* NOTE: Para evitar problemas al momento de renderizar las
+          vistas, se pasa la condicion a ser renderizado como `prop`.*/}
+          <TableViewComponent hiddeView={displayedViewsState.showTableView} />
+          <ChartViewcomponent hiddeView={displayedViewsState.showChartView} />
+        </MainLayout>
+      </MainWrapper>
     </ContainerLayout>
   );
 }

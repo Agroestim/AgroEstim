@@ -3,7 +3,7 @@ import {
   FormWrapper,
   LabelComponent,
   LegendComponent,
-} from "../styles";
+} from "./styled";
 
 export default function VarietycomparatorForm() {
   return (

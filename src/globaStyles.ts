@@ -46,10 +46,18 @@ export default createGlobalStyle`
     font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
-  input[type=button], input[type=submit] {
+  button, input[type=button], input[type=submit] {
+    font-family: "Zilla Slab", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+
+
     width: max-content;
     padding: 6px 10px;
-    border:solid .45px #575757;
-    border-radius: 4px;
   }
 `;

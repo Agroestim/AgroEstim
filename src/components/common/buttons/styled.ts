@@ -1,25 +1,35 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 8px;
+type ButtonSize = "lg" | "default" | "sm";
+type ButtonType = "default" | "inline";
+type ButtonPropType = {
+  size?: ButtonSize;
+  style?: ButtonType;
+  disable?: boolean;
+};
+
+export const Button = styled.button<ButtonPropType>`
+  border: 0.45px solid #575757;
   border-radius: 4px;
 
-  font-family: "Zilla Slab", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  text-align: center;
-  white-space: nowrap;
-  width: fit-content;
+  :active {
+  }
+  :hover {
+  }
+  :focus,
+  :focus-visible {
+  }
+`;
 
-  &:active,
-  &:not(:active) {
-    border-style: solid;
+export const InlineButton = styled.button<ButtonPropType>`
+  border: 0.45pxsolid #575757;
+  border-radius: 4px;
+
+  :active {
+  }
+  :hover {
+  }
+  :focus,
+  :focus-visible {
   }
 `;
