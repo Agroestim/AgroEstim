@@ -23,7 +23,9 @@
     /* Simplifaying my life */
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["*"],
+      "@components/*": ["./components/*"],
+      "@types/*": ["./types/*"]
     }
   },
   "include": ["src"],

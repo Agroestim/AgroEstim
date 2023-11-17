@@ -1,11 +1,11 @@
-import { THEME_KEY } from "../../config/storageKeys";
+import { THEME_KEY } from "@/config/storageKeys";
 import {
   ThemeAction,
   ThemeActionTypes,
   ThemePayload,
   ThemeType,
   ThemeTypes,
-} from "../../types/ThemeType";
+} from "@/types/ThemeType";
 
 const themeType =
   (localStorage.getItem(THEME_KEY) as ThemeType) || ThemeTypes.light;

@@ -9,27 +9,29 @@ type ButtonPropType = {
 };
 
 export const Button = styled.button<ButtonPropType>`
-  border: 0.45px solid #575757;
-  border-radius: 4px;
+  /* border: 0.45px solid #575757;
+  border-radius: 4px; */
 
-  :active {
+  /* :active {
   }
   :hover {
   }
   :focus,
   :focus-visible {
-  }
+  } */
 `;
 
 export const InlineButton = styled.button<ButtonPropType>`
-  border: 0.45pxsolid #575757;
-  border-radius: 4px;
+  /* border: 0.45px solid #575757;
+  border-radius: 4px; */
 
-  :active {
+  /* :active {
   }
   :hover {
   }
   :focus,
   :focus-visible {
-  }
+  } */
 `;
+
+export const SlideButton = styled.button``;

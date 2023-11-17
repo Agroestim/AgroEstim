@@ -1,12 +1,19 @@
 import styled from "styled-components";
 
+export const ConfigWrapper = styled.div`
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-self: stretch;
+  justify-content: space-around;
+`;
+
 export const FormWrapper = styled.form`
   display: flex;
-  flex: 1 0 0;
   flex-direction: column;
   align-items: center;
   align-self: stretch;
-  gap: 21px;
+  gap: 20px;
   justify-content: space-around;
   position: relative;
   font-family: "Zilla Slab", system-ui, -apple-system, BlinkMacSystemFont,
@@ -25,6 +32,8 @@ export const FieldsetComponent = styled.fieldset`
   align-items: stretch;
   flex-direction: column;
   flex-grow: 1;
+  padding: 0;
+  margin: 0;
 `;
 
 export const LegendComponent = styled.legend`

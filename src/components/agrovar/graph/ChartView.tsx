@@ -1,5 +1,3 @@
-import { FieldsetHiddeProp } from "@/types/FieldsetFormProps";
-
-export function ChartViewcomponent({ hiddeView }: FieldsetHiddeProp) {
-  return hiddeView ? null : <h1>Char view</h1>;
+export function ChartViewcomponent() {
+  return <h1>Char view</h1>;
 }

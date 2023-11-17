@@ -22,6 +22,7 @@ export const AsideLayout = styled.div`
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+  margin: 0 8px;
 `;
 
 export const MainWrapper = styled.main`

@@ -1,4 +1,3 @@
-import { QueryPayload } from "@/types/QueryTypes";
 import { ThemePayload } from "@/types/ThemeType";
 
 /**
@@ -6,7 +5,6 @@ import { ThemePayload } from "@/types/ThemeType";
  */
 interface RootState {
   Theme: ThemePayload;
-  Graphql: QueryPayload;
 }
 
 export default RootState;

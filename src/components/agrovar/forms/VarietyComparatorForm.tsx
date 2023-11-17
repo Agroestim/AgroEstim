@@ -30,13 +30,13 @@ export default function VarietycomparatorForm() {
           multiple
         >
           <option key={crypto.randomUUID()} value="">
-            --Seleccione una opcion
+            --Seleccione una opcion--
           </option>
         </select>
         <LabelComponent htmlFor="input_selection_variety">
           Variedad
         </LabelComponent>
-        <select name="selection_variety" id="input_selection_varity" multiple>
+        <select name="selection_variety" id="input_selection_variety" multiple>
           <option key={crypto.randomUUID()} value="">
             --Seleccione una opcion--
           </option>
