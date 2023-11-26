@@ -17,8 +17,8 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 
-    color: ${(props) => props.theme.textPrimary};
-    background-color: ${(props) => props.theme.backgroundPrimary};
+    color: ${({ theme }) => theme.textColorPrimary};
+    background-color: ${({ theme }) => theme.backgroundColorPrimary};
   }
 
   html, body {
@@ -46,6 +46,18 @@ export default createGlobalStyle`
     font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
+  span.as-label {
+    font-family: "Zilla Slab", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    font-style:normal;
+    text-align: center;
+    white-space: normal;
+    color: ${({ theme }) => theme.textColorPrimary}
+  }
+
   button, input[type=button], input[type=submit] {
     font-family: "Zilla Slab", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -55,8 +67,6 @@ export default createGlobalStyle`
     font-weight: 500;
     text-align: center;
     white-space: nowrap;
-
-
     width: max-content;
     padding: 6px 10px;
   }

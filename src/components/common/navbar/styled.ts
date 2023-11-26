@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const NavbarWrapper = styled.nav`
   border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-color: #575757;
+  border-bottom-width: 2px;
+  border-color: ${({ theme }) => theme.textColorSecondary};
   padding: 0px 8px;
   height: 62px;
   width: 1260px;
@@ -39,7 +39,7 @@ export const NavbarBrand = styled.strong`
 export const NavbarTogglerButton = styled.button`
   padding: 4px;
   cursor: default;
-  border: 2px solid #ffffff00;
+  border: none;
   border-radius: 4px;
 
   &:hover {

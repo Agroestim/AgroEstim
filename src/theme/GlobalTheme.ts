@@ -9,50 +9,92 @@ export const defaultTheme = ThemeTypes.light;
  * Paleta de colores para el `GlobalTheme`.
  */
 export default {
-  [ThemeTypes.dark]: {
-    textPrimary: "#f2f2f2",
-    textSecondary: "#3f3f3f",
-
-    colorPrimary: "#",
-    colorSecondary: "#f9f9f9",
-    colorAccent: "#99cb33",
-    colorLight: "#f2f2f2",
-    colorDark: "#373a3c",
-    colorInfo: "#2cb9ee",
-    colorSuccess: "#56af5c",
-    colorWarning: "#ffce00",
-    colorDanger: "#ef5350",
-
-    backgroundPrimary: "#3f3f3f",
-    backgroundSecondary: "#f2f2f2",
-
-    backgroundImageURL:
-      "https://campus.inta.gob.ar/pluginfile.php/1/theme_trema/loginbackgroundimage/1687355990/bg_login.jpg",
-
-    togglerIconURL:
-      "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e",
-  },
   [ThemeTypes.light]: {
-    textPrimary: "#3f3f3f",
-    textSecondary: "#f2f2f2",
-
-    colorPrimary: "#f9f9f9",
+    colorPrimary: "#",
     colorSecondary: "#",
-    colorAccent: "#99cb33",
-    colorLight: "#f2f2f2",
-    colorDark: "#373a3c",
-    colorInfo: "#2cb9ee",
-    colorSuccess: "#2e7d33",
-    colorWarning: "#ffce00",
-    colorDanger: "#ef5350",
+    colorTertiary: "#",
 
-    backgroundPrimary: "#f2f2f2",
-    backgroundSecondary: "#3f3f3f",
+    textColorPrimary: "#302F34",
+    textColorSecondary: "#D9D9D9",
+    textColorTertiary: "#BBB9B9",
 
-    backgroundImageURL:
-      "https://campus.inta.gob.ar/pluginfile.php/1/theme_trema/loginbackgroundimage/1687355990/bg_login.jpg",
+    backgroundColorPrimary: "#EEEEEE",
+    backgroundColorSecondary: "#302F34",
+    backgroundColorTertiary: "#575757",
 
-    togglerIconURL:
-      "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e",
+    commonPalette: {
+      infoColor: "#2DA6E8",
+      successColor: "#56AF5C",
+      warningColor: "#FFD524",
+      dangerColor: "#DA4545",
+    },
+
+    bluePalette: {
+      lightColor: "#37BBED",
+      color: "#2CB9EE",
+      darkColor: "#039BE5",
+    },
+
+    orangePalette: {
+      lightColor: "#F9AB63",
+      color: "#F79525",
+      darkColor: "#EA7413",
+    },
+
+    silverPalette: {
+      lightColor: "#8BC1C3",
+      color: "#50B7B2",
+      darkColor: "#008388",
+    },
+
+    redPalette: {
+      lightColor: "#FF6464",
+      color: "#EF5350",
+      darkColor: "#F84C4C",
+    },
+  },
+  [ThemeTypes.dark]: {
+    colorPrimary: "#",
+    colorSecondary: "#",
+    colorTertiary: "#",
+
+    textColorPrimary: "#D9D9D9",
+    textColorSecondary: "#302F34",
+    textColorTertiary: "#BBB9B9",
+
+    backgroundColorPrimary: "#302F34",
+    backgroundColorSecondary: "##EEEEEE",
+    backgroundColorTertiary: "#575757",
+
+    commonPalette: {
+      infoColor: "#2DA6E8",
+      successColor: "#56AF5C",
+      warningColor: "#FFD524",
+      dangerColor: "#DA4545",
+    },
+
+    bluePalette: {
+      lightColor: "#37BBED",
+      color: "#2CB9EE",
+      darkColor: "#039BE5",
+    },
+
+    orangePalette: {
+      lightColor: "#F9AB63",
+      color: "#F79525",
+      darkColor: "#EA7413",
+    },
+
+    silverPalette: {
+      lightColor: "#8BC1C3",
+      color: "#50B7B2",
+      darkColor: "#008388",
+    },
+
+    redPalette: {
+      lightColor: "#FF6464",
+      color: "#EF5350",
+      darkColor: "#F84C4C",
+    },
   },
 } satisfies GlobalTheme;

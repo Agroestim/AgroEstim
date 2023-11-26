@@ -1,3 +1,4 @@
+import { AgrovarActionPayload } from "@/types/AgrovarViewTypes";
 import { ThemePayload } from "@/types/ThemeType";
 
 /**
@@ -5,6 +6,7 @@ import { ThemePayload } from "@/types/ThemeType";
  */
 interface RootState {
   Theme: ThemePayload;
+  AgrovarView: AgrovarActionPayload;
 }
 
 export default RootState;

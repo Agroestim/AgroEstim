@@ -2,23 +2,46 @@
  * Representa el tema base de la aplicacion.
  */
 export interface Theme {
-  textPrimary: string;
-  textSecondary: string;
-
   colorPrimary: string;
   colorSecondary: string;
-  colorAccent: string;
-  colorLight: string;
-  colorDark: string;
-  colorInfo: string;
-  colorSuccess: string;
-  colorWarning: string;
-  colorDanger: string;
+  colorTertiary: string;
 
-  backgroundPrimary: string;
-  backgroundSecondary: string;
+  textColorPrimary: string;
+  textColorSecondary: string;
+  textColorTertiary: string;
 
-  backgroundImageURL: string;
+  backgroundColorPrimary: string;
+  backgroundColorSecondary: string;
+  backgroundColorTertiary: string;
 
-  togglerIconURL: string;
+  commonPalette: {
+    infoColor: string;
+    successColor: string;
+    warningColor: string;
+    dangerColor: string;
+  };
+
+  bluePalette: {
+    lightColor: string;
+    color: string;
+    darkColor: string;
+  };
+
+  orangePalette: {
+    lightColor: string;
+    color: string;
+    darkColor: string;
+  };
+
+  silverPalette: {
+    lightColor: string;
+    color: string;
+    darkColor: string;
+  };
+
+  redPalette: {
+    lightColor: string;
+    color: string;
+    darkColor: string;
+  };
 }

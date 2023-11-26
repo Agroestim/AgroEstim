@@ -1,19 +1,12 @@
-import {
-  FieldsetComponent,
-  FormWrapper,
-  LabelComponent,
-  LegendComponent,
-} from "./styled";
+import { Form, FormFieldset, FormLabel, FormLegend } from "./styled";
 
 export default function VarietycomparatorForm() {
   return (
-    <FormWrapper>
-      <FieldsetComponent>
-        <LegendComponent>Comparador de variedades</LegendComponent>
+    <Form>
+      <FormFieldset>
+        <FormLegend>Comparador de variedades</FormLegend>
 
-        <LabelComponent htmlFor="input_selection_campaign">
-          Campaña
-        </LabelComponent>
+        <FormLabel htmlFor="input_selection_campaign">Campaña</FormLabel>
         <input
           type="date"
           id="input_selection_campaign"
@@ -21,9 +14,10 @@ export default function VarietycomparatorForm() {
           min="2013-00-00"
           required
         />
-        <LabelComponent htmlFor="input_selection_location">
-          Localidad
-        </LabelComponent>
+
+        <hr />
+
+        <FormLabel htmlFor="input_selection_location">Localidad</FormLabel>
         <select
           name="selection_location"
           id="input_selection_location"
@@ -33,15 +27,16 @@ export default function VarietycomparatorForm() {
             --Seleccione una opcion--
           </option>
         </select>
-        <LabelComponent htmlFor="input_selection_variety">
-          Variedad
-        </LabelComponent>
+
+        <hr />
+
+        <FormLabel htmlFor="input_selection_variety">Variedad</FormLabel>
         <select name="selection_variety" id="input_selection_variety" multiple>
           <option key={crypto.randomUUID()} value="">
             --Seleccione una opcion--
           </option>
         </select>
-      </FieldsetComponent>
-    </FormWrapper>
+      </FormFieldset>
+    </Form>
   );
 }

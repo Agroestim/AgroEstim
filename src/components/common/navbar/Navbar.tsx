@@ -7,9 +7,9 @@ import {
   NavbarWrapper,
 } from "./styled";
 
-import AGS_BRAND_LOGO from "../../../assets/img/AGS_BRAND_LOGO.png";
+import AGS_BRAND_LOGO from "@assets/img/AGS_BRAND_LOGO.png";
 
-export function CommonNavbar() {
+export function Navbar() {
   return (
     <NavbarWrapper>
       <NavbarBrandWrapper>

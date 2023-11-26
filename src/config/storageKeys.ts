@@ -8,4 +8,4 @@ export const THEME_KEY = "THEME_KEY";
  */
 export const GRAPHQL_QUERY_SEARCH_OPERATION = "GQL_SEARCH_QUERY_OPERATION";
 
-export const AGROVAR_KEY = "AGROVAR_KEY";
+export const AGROVAR_VIEW_KEY = "AGROVAR_KEY";

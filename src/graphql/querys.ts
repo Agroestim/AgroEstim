@@ -57,7 +57,7 @@ export const GET_VARIETIES_COMPARATION_QUERY = gql`
 /**
  * A set of possible operations which can made.
  */
-export const QuerySet = {
+export const GRAPHQL_QUERY_SET = {
   location_ranking: GET_LOCATION_RANKING_QUERY,
   variety_comparator: GET_VARIETIES_COMPARATION_QUERY,
 };

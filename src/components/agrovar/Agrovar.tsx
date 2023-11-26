@@ -1,28 +1,18 @@
 import { SearchFormComponent } from "./forms/SearchFormComponent";
-import { GraphViewComponent } from "./graph/GrapViewComponent";
-import {
-  AsideLayout,
-  AsideWrapper,
-  ContainerLayout,
-  MainLayout,
-  MainWrapper,
-} from "./styles";
+import { Aside, ContainerLayout, Main } from "./styles";
+import { MixedViewComponent } from "./views/MixedViewComponent";
 
 export function AgrovarViewComponent() {
   document.title = "Agrovar - Indice";
 
   return (
     <ContainerLayout>
-      <AsideWrapper>
-        <AsideLayout>
-          <SearchFormComponent />
-        </AsideLayout>
-      </AsideWrapper>
-      <MainWrapper>
-        <MainLayout>
-          <GraphViewComponent />
-        </MainLayout>
-      </MainWrapper>
+      <Aside>
+        <SearchFormComponent />
+      </Aside>
+      <Main>
+        <MixedViewComponent />
+      </Main>
     </ContainerLayout>
   );
 }

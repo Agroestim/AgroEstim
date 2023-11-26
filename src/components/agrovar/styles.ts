@@ -25,6 +25,31 @@ export const AsideLayout = styled.div`
   margin: 0 8px;
 `;
 
+export const Aside = styled.aside`
+  /* height */
+  width: 100%;
+  max-width: 315px;
+  padding: 8px 0px;
+  margin: 0 8px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+`;
+
+export const Main = styled.main`
+  /* width */
+  width: 100%;
+  /* height */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+`;
+
 export const MainWrapper = styled.main`
   width: 100%;
   height: 100%;
