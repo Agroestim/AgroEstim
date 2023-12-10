@@ -1,13 +1,13 @@
 import { AGROVAR_VIEW_KEY } from "@/config/storageKeys";
+import { AgrovarViewTypes } from "@/types/agrovar/ComponentTypes";
 import {
-  AgrovarActionPayload,
   AgrovarActionTypes,
   AgrovarViewAction,
-} from "@/types/AgrovarReduxTypes";
-import { AgrovarViewTypes } from "@/types/AgrovarViewTypes";
+  AgrovarViewActionPayload,
+} from "@/types/agrovar/ReduxTypes";
 
 export default function setAgrovarViewAction(
-  payload: AgrovarActionPayload
+  payload: AgrovarViewActionPayload
 ): AgrovarViewAction {
   const { viewType } = payload || {};
 

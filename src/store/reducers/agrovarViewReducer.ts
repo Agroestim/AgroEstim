@@ -1,21 +1,24 @@
 import { AGROVAR_VIEW_KEY } from "@/config/storageKeys";
 import {
-  AgrovarActionPayload,
+  AgrovarViewType,
+  AgrovarViewTypes,
+} from "@/types/agrovar/ComponentTypes";
+import {
   AgrovarActionTypes,
   AgrovarViewAction,
-} from "@/types/AgrovarReduxTypes";
-import { AgrovarViewType, AgrovarViewTypes } from "@/types/AgrovarViewTypes";
+  AgrovarViewActionPayload,
+} from "@/types/agrovar/ReduxTypes";
 
 const themeType =
   (localStorage.getItem(AGROVAR_VIEW_KEY) as AgrovarViewType) ||
   AgrovarViewTypes.GRAPH_VIEW;
 
-const initialState: AgrovarActionPayload = {
+const initialState: AgrovarViewActionPayload = {
   viewType: themeType,
 };
 
 export default function agrovarViewReducer(
-  state: AgrovarActionPayload = initialState,
+  state: AgrovarViewActionPayload = initialState,
   action: AgrovarViewAction
 ) {
   const { type, payload } = action;

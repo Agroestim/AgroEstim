@@ -10,6 +10,6 @@ import useTypedSelector from "./useTypedSelector";
  * @returns {Theme}
  */
 export function useTheme(themes: GlobalTheme): Theme {
-  const theme = useTypedSelector(({ Theme }) => Theme.type);
+  const theme = useTypedSelector(({ Theme: Theme }) => Theme.type);
   return themes[theme || defaultTheme];
 }

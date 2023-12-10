@@ -9,7 +9,7 @@ export function Spinner() {
           cy="20"
           r="17.5"
           pathLength="100"
-          stroke-width="5px"
+          strokeWidth="5px"
           fill="none"
         />
         <Car
@@ -17,7 +17,7 @@ export function Spinner() {
           cy="20"
           r="17.5"
           pathLength="100"
-          stroke-width="5px"
+          strokeWidth="5px"
           fill="none"
         />
       </SVGSpinner>

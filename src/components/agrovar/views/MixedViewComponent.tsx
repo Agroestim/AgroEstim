@@ -1,5 +1,5 @@
 import { useSuscribeToggleViewType } from "@/hooks/agrovar/useSuscribeToggleViewType";
-import { AgrovarViewTypes } from "@/types/AgrovarViewTypes";
+import { AgrovarViewTypes } from "@/types/agrovar/ComponentTypes";
 import { useEffect } from "react";
 import { ChartViewcomponent } from "./ChartView";
 import { TableViewComponent } from "./TableView";

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SearchSettingsContainer = styled.div`
+export const SettingsContainer = styled.div`
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -43,4 +43,16 @@ export const FormLegend = styled.legend`
 
 export const FormLabel = styled.label`
   font-weight: 500;
+`;
+
+export const StatusBoundary = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  b {
+    color: ${({ theme }) => theme.commonPalette.dangerColor};
+  }
 `;

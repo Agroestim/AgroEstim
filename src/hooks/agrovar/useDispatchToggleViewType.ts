@@ -1,9 +1,9 @@
-import { AgrovarToggleViewActions } from "@/types/AgrovarHooksTypes";
+import { AgrovarViewTypes } from "@/types/agrovar/ComponentTypes";
+import { AgrovarToggleViewActions } from "@/types/agrovar/HooksTypes";
 import {
   AgrovarActionTypes,
   AgrovarViewAction,
-} from "@/types/AgrovarReduxTypes";
-import { AgrovarViewTypes } from "@/types/AgrovarViewTypes";
+} from "@/types/agrovar/ReduxTypes";
 import { useDispatch } from "react-redux";
 import { Dispatch } from "redux";
 

@@ -1,4 +1,5 @@
 import { combineReducers, legacy_createStore } from "redux";
+import agrovarOpsFormReducer from "./reducers/agrovarOpsFormReducer";
 import agrovarViewReducer from "./reducers/agrovarViewReducer";
 import themeReducer from "./reducers/themeReducer";
 
@@ -8,6 +9,7 @@ import themeReducer from "./reducers/themeReducer";
 const combinedReducers = combineReducers({
   Theme: themeReducer,
   AgrovarView: agrovarViewReducer,
+  AgrovarForm: agrovarOpsFormReducer,
 });
 
 /**

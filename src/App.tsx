@@ -8,6 +8,7 @@ import {
 import { ThemeProvider } from "styled-components";
 import { AgrovarViewComponent } from "./components/agrovar/Agrovar";
 import Home from "./components/app/App";
+import { Spinner } from "./components/common/spinner/Spinner";
 import GlobalStyle from "./globaStyles";
 import { useApollo } from "./hooks/useApollo";
 import { useTheme } from "./hooks/useTheme";
@@ -42,7 +43,10 @@ export default function App() {
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <RouterProvider router={router}></RouterProvider>
+        <RouterProvider
+          router={router}
+          fallbackElement={<Spinner />}
+        ></RouterProvider>
       </ThemeProvider>
     </ApolloProvider>
   );

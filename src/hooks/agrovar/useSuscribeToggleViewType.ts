@@ -1,5 +1,8 @@
 import RootState from "@/store/rootState";
-import { AgrovarViewType, AgrovarViewTypes } from "@/types/AgrovarViewTypes";
+import {
+  AgrovarViewType,
+  AgrovarViewTypes,
+} from "@/types/agrovar/ComponentTypes";
 import { useState } from "react";
 import { useStore } from "react-redux";
 

@@ -4,8 +4,11 @@
 export const THEME_KEY = "THEME_KEY";
 
 /**
- * Represents the GraphQL operation query key in the `localStorage`
+ * `localStorage` key for Agrovar view type.
  */
-export const GRAPHQL_QUERY_SEARCH_OPERATION = "GQL_SEARCH_QUERY_OPERATION";
+export const AGROVAR_VIEW_KEY = "AGROVAR_VIEW_KEY";
 
-export const AGROVAR_VIEW_KEY = "AGROVAR_KEY";
+/**
+ * `localstorage` key for Agrovar Search Operation Form type.
+ */
+export const AGROVAR_OPS_FORM_KEY = "AGROVAR_OPS_FORM_KEY";

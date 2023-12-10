@@ -1,9 +1,46 @@
-import { LOCATIONS_CHOICES, VARITIES_CHOICES } from "@/graphql/config";
-import { Form, FormFieldset, FormLabel, FormLegend } from "./styled";
+import { Spinner } from "@/components/common/spinner/Spinner";
+import { GQL_VARIETY_GROUP_PREFLIGHT_QUERY } from "@/graphql/queries";
+import { VarietyGroupPreflightType } from "@/types/agrovar/PreflightTypes";
+import { useQuery } from "@apollo/client";
+import { useForm } from "react-hook-form";
+import {
+  Form,
+  FormFieldset,
+  FormLabel,
+  FormLegend,
+  StatusBoundary,
+} from "./styled";
 
 export default function LocationRankingForm() {
+  const { register, handleSubmit } = useForm<VarietyGroupPreflightType>();
+  const { data, loading, error } = useQuery<VarietyGroupPreflightType>(
+    GQL_VARIETY_GROUP_PREFLIGHT_QUERY
+  );
+
+  if (loading) {
+    return (
+      <StatusBoundary>
+        <Spinner />
+      </StatusBoundary>
+    );
+  }
+
+  if (error) {
+    return (
+      <StatusBoundary>
+        <h3>The server response with an error.</h3>
+        <p>The server has responded with any data at the request.</p>
+        <p>
+          <b>{error.message}</b>
+        </p>
+      </StatusBoundary>
+    );
+  }
+
+  const { varietyOptionsList, locationOptionsList } = data || {};
+
   return (
-    <Form>
+    <Form onSubmit={handleSubmit((data) => console.log({ data }))}>
       <FormFieldset>
         <FormLegend>Ranking por localidad</FormLegend>
 
@@ -11,8 +48,7 @@ export default function LocationRankingForm() {
         <input
           type="date"
           id="input_selection_campaign"
-          name="selection_campaign"
-          min="2013-00-00"
+          {...register("campaignOptionsList")}
           required
         />
 
@@ -20,16 +56,18 @@ export default function LocationRankingForm() {
 
         <FormLabel htmlFor="input_selection_location">Localidad</FormLabel>
         <select
-          name="selection_location"
           id="input_selection_location"
+          {...register("locationOptionsList")}
+          required
           multiple
         >
-          <option key={crypto.randomUUID()} value="">
-            --Seleccione una opcion
+          <option key={crypto.randomUUID()} value="SELECT">
+            --Seleccione una opcion--
           </option>
-          {Object.entries(LOCATIONS_CHOICES).map((values) => (
-            <option key={crypto.randomUUID()} value={values[0]}>
-              {values[1]}
+
+          {locationOptionsList?.map((value) => (
+            <option key={crypto.randomUUID()} value={value}>
+              {value}
             </option>
           ))}
         </select>
@@ -37,17 +75,26 @@ export default function LocationRankingForm() {
         <hr />
 
         <FormLabel htmlFor="input_selection_variety">Variedad</FormLabel>
-        <select name="selection_variety" id="input_selection_variety" multiple>
-          <option key={crypto.randomUUID()} value="">
+        <select
+          id="input_selection_variety"
+          {...register("varietyOptionsList")}
+          required
+          multiple
+        >
+          <option key={crypto.randomUUID()} value="SELECT">
             --Seleccione una opcion--
           </option>
-          {Object.entries(VARITIES_CHOICES).map((values) => (
-            <option key={crypto.randomUUID()} value={values[0]}>
-              {values[1]}
+
+          {varietyOptionsList?.map((value) => (
+            <option key={crypto.randomUUID()} value={value}>
+              {value}
             </option>
           ))}
         </select>
       </FormFieldset>
+
+      <button type="submit">Enviar</button>
+      <button type="reset">Reestablecer</button>
     </Form>
   );
 }
